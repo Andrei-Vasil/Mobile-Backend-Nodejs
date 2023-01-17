@@ -10,7 +10,9 @@ const router = express.Router();
 
 router.get('/', async (req, res, next) => {
   try {
+    console.log("mata ma 1");
     const allCats = await cats.find({});
+    console.log("mata ma 2");
     res.json(allCats);
   } catch (error) {
     next(error);

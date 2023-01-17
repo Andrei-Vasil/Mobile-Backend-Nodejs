@@ -13,9 +13,9 @@ app.use(helmet());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-const photos = require('./routes/cat');
+const cats = require('./routes/cat');
 
-app.use('/api/cat', photos);
+app.use('/api/cat', cats);
 
 app.use(notFound);
 app.use(errorHandler);
